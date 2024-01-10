@@ -1,0 +1,11 @@
+MAIN=main.cpp
+PROJECT_NAME=Textura
+INCLUDE_DIR=include
+FLAGS=-lGL -lglfw 
+SOURCE_INCLUDE=src/glad.c
+
+$(PROJECT_NAME): $(MAIN)
+	g++ -o $(PROJECT_NAME) $(MAIN) $(SOURCE_INCLUDE) -I$(INCLUDE_DIR) $(FLAGS) 
+
+run:$(PROJECT_NAME)
+	./$(PROJECT_NAME)
